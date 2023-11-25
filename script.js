@@ -18,7 +18,7 @@ function animateHeaderTransition() {
   window.addEventListener("scroll", animateHeaderTransition);
   
   menufixo();
-  window.addEventListener("scroll", () => {
-    console.log(window.scrollY);
-  });
+  // window.addEventListener("scroll", () => {
+  //   console.log(window.scrollY);
+  // });
   

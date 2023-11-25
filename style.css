@@ -3,6 +3,7 @@
   --colorbtnHover--: #512200bd;
   --clrFtBorder--: #f9f9f9;
   --clrgray--: #a5a1a1;
+  --hoverimg--: #5CA720B0;
 }
 
 * {
@@ -26,7 +27,7 @@ header .menu {
   justify-content: space-between;
   height: 80px;
   width: 100%;
-    transition: .3s linear;
+  transition: .3s linear;
 }
 .menu.fixednav {
   position: fixed;
@@ -54,7 +55,6 @@ header .menu {
 nav #btnMenuMobile {
   display: none;
 }
-/* =============================== terminou o header ===============================*/
 
 /* =============================== Section dos produtos ============================*/
 
@@ -63,7 +63,7 @@ section .titleSection {
   align-items: center;
   justify-content: space-between;
   padding: 40px 35px;
-  /* padding-bottom: 30px;  */
+
   border-bottom: 1px solid var(--clrgray--);
 }
 
@@ -71,13 +71,12 @@ section .containerProducts {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-
-  gap: 25px;
+  gap: 20px;
   margin-top: 50px;
 }
 
 .containerProducts .boxProducts {
-  /* border: 2px solid blue; */
+
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -88,14 +87,59 @@ section .containerProducts {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.boxProducts img {
+.headerCard{
   width: 100%;
+  /* border: 2px solid red; */
+  /* background-color: var(--colorgreen--); */
 }
-.boxProducts img:hover {
-  background-color: rgba(92, 167, 32, 0.69);
-  transition: 0.4s linear;
+.headerCard {
+  position: relative;
+  overflow: hidden;
 }
 
+.headerCard::before,
+.headerCard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--hoverimg--);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.headerCard:hover::before,
+.headerCard:hover::after {
+  opacity: 1;
+}
+
+.headerCard:hover::before {
+  transform: translateY(-10px);
+}
+
+.headerCard:hover::after {
+  transform: translateY(10px);
+}
+.description {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--colorgreen--);
+  padding: 10px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.headerCard:hover .description {
+  display: block;
+  opacity: 1;
+  transform: translateY(-10px);
+}
 .boxProducts h4 {
   margin-top: 10px;
   font-size: 1.4rem;
@@ -112,6 +156,7 @@ section .containerProducts {
   color: var(--colorgreen--);
   font-size: 1.5rem;
   font-weight: bold;
+  border-bottom: 1px solid var(--colorgreen--);
 }
 
 .boxProducts .btnComprar {
@@ -134,33 +179,40 @@ section .containerProducts {
 }
 /* Fim da section */
 
+
 footer {
-  border: 2px solid red;
+  width: 100%;
+  height: 300px;
   margin-top: 50px;
+
   display: flex;
   flex-direction: column;
+  
+  border-top: 1px solid var(--clrgray--);
   background-color: var(--clrFtBorder--);
+
+  /* border: 2px solid red; */
 }
 
 .containerTextAndNew {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-
-  border: 2px solid burlywood;
+  border: 2px solid yellow;
 }
 
-.containerTextFooter {
+.textFooter {
   display: flex;
   flex-direction: column;
 
   margin-inline: 20px;
   border: 2px solid blue;
 }
-.containerTextFooter .textFooter {
+ /* .textFooter {
   border: 2px solid black;
   display: flex;
-  /* flex-direction: column; */
-}
+  flex-direction: column;
+} */
 .textFooter a {
   text-decoration: none;
   color: #000;
@@ -172,9 +224,16 @@ footer .newsletter {
 }
 
 footer .containerSocialPay {
+  border: solid red;
   display: flex;
 }
 
+
+
+
+
+
+/* Responsividade */
 @media only screen and (min-width: 320px) and (max-width: 680px) {
   header nav {
     /* border: 2px solid black; */
@@ -186,4 +245,10 @@ footer .containerSocialPay {
     margin-right: 10px;
     /* border: 4px solid black; */
   }
+   /* #imgBanner{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    border: 2px solid red;
+  } */
 }
