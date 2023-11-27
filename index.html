@@ -21,18 +21,30 @@
   <body>
     <header>
       <nav class="menu fixednav">
-        
         <a href=""><img src="src/logo.png" alt="" /></a>
 
         <div class="btnNav">
+          <div class="searchContainer">
+            <input
+              type="search"
+              name="buscar"
+              id="buscar"
+              placeholder="Encontre o que procura"
+            />
+            <button id="btnBuscar">
+              <img src="src/lupa.png" alt="icone da lupa" title="Buscar" />
+            </button>
+          </div>
+
           <button>
-            <img src="src/lupa.png" alt="icone da lupa" />
+            <img src="src/user.png" alt="icone do usuário" title="Entrar" />
           </button>
           <button>
-            <img src="src/user.png" alt="icone do usuário" />
-          </button>
-          <button>
-            <img src="src/car.png" alt="icone do carrinho" />
+            <img
+              src="src/car.png"
+              alt="icone do carrinho"
+              title="Carrinho de compras"
+            />
           </button>
         </div>
         <button id="btnMenuMobile"><i class="fa-solid fa-bars"></i></button>
@@ -49,79 +61,169 @@
         </div>
 
         <div class="containerProducts">
+          <article class="boxProducts">
+            <div class="headerCard">
+              <img src="src/produtos/img01.png" alt="" />
+              <div class="description">
+                <h6>Descrição do Elixir da Eternidade.</h6>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  itaque eos amet incidunt id veniam molestias nulla excepturi
+                  iusto sed adipisci omnis illum et laborum laudantium pariatur
+                  modi ducimus velit.
+                </p>
+              </div>
+            </div>
+            <h4>Elixir da Eternidade</h4>
+            <h5>R$ <span class="valorProduto"> 50,00</span></h5>
+            <button class="btnComprar">Comprar</button>
+          </article>
 
           <article class="boxProducts">
             <div class="headerCard">
-                <img src="src/produtos/img01.png" alt="" />
-                <div class="background-overlay"></div>
+              <img src="src/produtos/img02.png" alt="" />
+              <div class="description">
+                <h6>Descrição da Vitamina do Sol.</h6>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  itaque eos amet incidunt id veniam molestias nulla excepturi
+                  iusto sed adipisci omnis illum et laborum laudantium pariatur
+                  modi ducimus velit.
+                </p>
+              </div>
             </div>
-            <div class="description">
-                <!-- Descrição do Produto -->
-                <p>Descrição do Elixir da Eternidade.</p>
-            </div>
-            <h4>Elixir da Eternidade</h4>
-            <h5>R$<span class="valorProduto"> 50,00</span></h5>
-            <button class="btnComprar">Comprar</button>
-        </article>
-
-          <article class="boxProducts">
-            <img src="src/produtos/img02.png" alt="" />
             <h4>Vitamina do Sol</h4>
-            <h5>R$<span class="valorProduto"> 50,00</span></h5>
+            <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </article>
 
           <article class="boxProducts">
-            <img src="src/produtos/img03.png" alt="" />
+            <div class="headerCard">
+              <img src="src/produtos/img03.png" alt="" />
+              <div class="description">
+                <h6>Descrição da Vitamina da Lua.</h6>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  itaque eos amet incidunt id veniam molestias nulla excepturi
+                  iusto sed adipisci omnis illum et laborum laudantium pariatur
+                  modi ducimus velit.
+                </p>
+              </div>
+            </div>
             <h4>Vitamina da Lua</h4>
-            <h5>R$<span class="valorProduto"> 50,00</span></h5>
+            <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </article>
         </div>
 
         <div class="containerProducts">
           <article class="boxProducts">
-            <img src="src/produtos/img 04.png" alt="" />
+            <div class="headerCard">
+              <img src="src/produtos/img 04.png" alt="" />
+              <div class="description">
+                <h6>Descrição da Pétalas de Amor.</h6>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  itaque eos amet incidunt id veniam molestias nulla excepturi
+                  iusto sed adipisci omnis illum et laborum laudantium pariatur
+                  modi ducimus velit.
+                </p>
+              </div>
+            </div>
             <h4>Pétalas de Amor</h4>
-            <h5>R$<span class="valorProduto"> 50,00</span></h5>
+            <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </article>
 
           <article class="boxProducts">
-            <img src="src/produtos/img5.png" alt="" />
+            <div class="headerCard">
+              <img src="src/produtos/img5.png" alt="" />
+              <div class="description">
+                <h6>Descrição da Essência da Natureza.</h6>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  itaque eos amet incidunt id veniam molestias nulla excepturi
+                  iusto sed adipisci omnis illum et laborum laudantium pariatur
+                  modi ducimus velit.
+                </p>
+              </div>
+            </div>
             <h4>Essência da Natureza</h4>
-            <h5>R$<span class="valorProduto"> 50,00</span></h5>
+            <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </article>
 
           <article class="boxProducts">
-            <img src="src/produtos/img06.png" alt="" />
+            <div class="headerCard">
+              <img src="src/produtos/img06.png" alt="" />
+              <div class="description">
+                <h6>Descrição da Jasmin com notas de Rosa.</h6>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  itaque eos amet incidunt id veniam molestias nulla excepturi
+                  iusto sed adipisci omnis illum et laborum laudantium pariatur
+                  modi ducimus velit.
+                </p>
+              </div>
+            </div>
             <h4>Jasmin com notas de Rosa</h4>
-            <h5>R$<span class="valorProduto"> 50,00</span></h5>
+            <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </article>
         </div>
 
         <div class="containerProducts">
-          
           <article class="boxProducts">
-            <img src="src/produtos/img07.png" alt="" />
+            <div class="headerCard">
+              <img src="src/produtos/img07.png" alt="" />
+              <div class="description">
+                <h6>Descrição da Essência de Melissa.</h6>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  itaque eos amet incidunt id veniam molestias nulla excepturi
+                  iusto sed adipisci omnis illum et laborum laudantium pariatur
+                  modi ducimus velit.
+                </p>
+              </div>
+            </div>
             <h4>Essência de Melissa</h4>
-            <h5>R$<span class="valorProduto"> 50,00</span></h5>
+            <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </article>
 
           <article class="boxProducts">
-            <img src="src/produtos/img08.png" alt="" />
+            <div class="headerCard">
+              <img src="src/produtos/img08.png" alt="" />
+              <div class="description">
+                <h6>Descrição da Pureza Iluminada.</h6>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  itaque eos amet incidunt id veniam molestias nulla excepturi
+                  iusto sed adipisci omnis illum et laborum laudantium pariatur
+                  modi ducimus velit.
+                </p>
+              </div>
+            </div>
             <h4>Pureza Iluminada</h4>
-            <h5>R$<span class="valorProduto"> 50,00</span></h5>
+            <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </article>
 
           <article class="boxProducts">
-            <img src="src/produtos/img09.png" alt="" />
+            <div class="headerCard">
+              <img src="src/produtos/img09.png" alt="" />
+              <div class="description">
+                <h6>Descrição da Essência de patchouli.</h6>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+                  itaque eos amet incidunt id veniam molestias nulla excepturi
+                  iusto sed adipisci omnis illum et laborum laudantium pariatur
+                  modi ducimus velit.
+                </p>
+              </div>
+            </div>
             <h4>Essência de patchouli</h4>
-            <h5>R$<span class="valorProduto"> 50,00</span></h5>
+            <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </article>
         </div>
@@ -138,26 +240,31 @@
         </div>
 
         <div class="newsletter">
-          <label>Newsletter</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Digite seu melhor e-mail"
-          />
-          <button id="inscrever">Inscrever</button>
+          <h5>Newsletter</h5>
+          <div class="controlInput">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Digite seu melhor e-mail"
+            />
+            <button id="inscrever">Inscrever</button>
+          </div>
         </div>
       </div>
 
       <div class="containerSocialPay">
         <div class="socialFooter">
-          <img src="src/instagram.png" alt="logo instagram" />
-          <img src="src/facebook.png" alt="logo facebook" />
+          <a href="#">
+            <img src="src/instagram.png" alt="logo instagram" />
+          </a>
+          <a href="#">
+            <img src="src/facebook.png" alt="logo facebook" />
+          </a>
         </div>
 
         <div class="paymentsFooter">
           <img src="src/pagamentos.png" alt="tipos de pagamentos" />
-
         </div>
       </div>
     </footer>

@@ -18,7 +18,10 @@ function animateHeaderTransition() {
   window.addEventListener("scroll", animateHeaderTransition);
   
   menufixo();
-  // window.addEventListener("scroll", () => {
-  //   console.log(window.scrollY);
-  // });
-  
+ 
+
+const btnBuscar = document.querySelector('#btnBuscar').addEventListener('click', () =>{
+  const buscar = document.querySelector('#buscar')
+  const isInputVisible = window.getComputedStyle(buscar).display !== 'none';
+  buscar.style.display = isInputVisible ? 'none' : 'block';
+})

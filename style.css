@@ -3,7 +3,7 @@
   --colorbtnHover--: #512200bd;
   --clrFtBorder--: #f9f9f9;
   --clrgray--: #a5a1a1;
-  --hoverimg--: #5CA720B0;
+  --hoverimg--: #5ca720b0;
 }
 
 * {
@@ -16,6 +16,7 @@
 header {
   display: flex;
   flex-direction: column;
+
   position: relative;
   top: 20%;
   left: 0;
@@ -25,15 +26,18 @@ header .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   height: 80px;
   width: 100%;
-  transition: .3s linear;
+  transition: 0.3s linear;
 }
 .menu.fixednav {
   position: fixed;
   background-color: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    height: 50px;
+
+  height: 50px;
+  z-index: 1;
 }
 .menu a {
   margin-left: 30px;
@@ -41,10 +45,26 @@ header .menu {
 
 .menu .btnNav {
   display: flex;
-  justify-content: space-evenly;
-  width: 15%;
+  justify-content: space-around;
+  width: 20%;
   margin-right: 50px;
+
 }
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+}
+#buscar {
+  height: 30px;
+  width: 100%;
+  outline: none;
+  display: none;
+
+}
+
 
 .menu button {
   cursor: pointer;
@@ -55,8 +75,6 @@ header .menu {
 nav #btnMenuMobile {
   display: none;
 }
-
-/* =============================== Section dos produtos ============================*/
 
 section .titleSection {
   display: flex;
@@ -76,7 +94,6 @@ section .containerProducts {
 }
 
 .containerProducts .boxProducts {
-
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -84,15 +101,11 @@ section .containerProducts {
   padding: 10px;
   border-radius: 5px;
   background-color: #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.headerCard{
-  width: 100%;
-  /* border: 2px solid red; */
-  /* background-color: var(--colorgreen--); */
-}
 .headerCard {
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -107,39 +120,62 @@ section .containerProducts {
   height: 100%;
   background-color: var(--hoverimg--);
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: transform 1s linear;
 }
 
 .headerCard:hover::before,
 .headerCard:hover::after {
-  opacity: 1;
+  transform: translateY(-80%);
+  opacity: 0.2;
+  transition-delay: 1s;
 }
 
-.headerCard:hover::before {
-  transform: translateY(-10px);
-}
-
-.headerCard:hover::after {
-  transform: translateY(10px);
-}
-.description {
+.headerCard .description {
   display: none;
   position: absolute;
-  top: 100%;
+
+  bottom: 240px;
   left: 0;
   width: 100%;
-  background-color: var(--colorgreen--);
+  height: 240px;
+
   padding: 10px;
-  color: #fff;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: 5s ease;
+}
+.headerCard .description h6,
+.headerCard .description ul {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .headerCard:hover .description {
+  height: 240px;
+  bottom: 240px;
   display: block;
   opacity: 1;
-  transform: translateY(-10px);
+  background-color: #fff;
+  transform: translateY(100%);
 }
+
+.headerCard:hover .description h6 {
+  text-align: center;
+  margin-block: 20px;
+  visibility: visible;
+  opacity: 1;
+  color: #000;
+  font-size: 1rem;
+}
+.headerCard .description p {
+  list-style: none;
+  width: 100%;
+  visibility: visible;
+  bottom: 240px;
+  color: #000;
+  text-align: justify;
+  opacity: 1;
+}
+
 .boxProducts h4 {
   margin-top: 10px;
   font-size: 1.4rem;
@@ -177,78 +213,147 @@ section .containerProducts {
   background-color: var(--colorbtnHover--);
   transition: 0.4s ease-in-out;
 }
-/* Fim da section */
 
 
 footer {
-  width: 100%;
-  height: 300px;
-  margin-top: 50px;
-
+  border-top: 1px solid var(--clrgray--);
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
-  
-  border-top: 1px solid var(--clrgray--);
+  flex-wrap: wrap;
   background-color: var(--clrFtBorder--);
-
-  /* border: 2px solid red; */
 }
 
 .containerTextAndNew {
-  width: 100%;
+  margin-top: 25px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  border: 2px solid yellow;
+  flex-wrap: wrap;
 }
 
 .textFooter {
   display: flex;
   flex-direction: column;
-
-  margin-inline: 20px;
-  border: 2px solid blue;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  padding: 1rem;
 }
- /* .textFooter {
-  border: 2px solid black;
-  display: flex;
-  flex-direction: column;
-} */
 .textFooter a {
   text-decoration: none;
   color: #000;
+  margin-top: 11px;
+  font-weight: 600;
 }
-footer .newsletter {
+
+.newsletter {
   width: 30%;
+
+
   display: flex;
-  border: 2px solid green;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.newsletter h5 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-footer .containerSocialPay {
-  border: solid red;
+.controlInput {
+  width: 100%;
   display: flex;
 }
+.controlInput input {
+  width: 70%;
+  outline: none;
+  font-size: 1.1rem;
+  background-color: #fff;
+  border-radius: 0.3125rem 0rem 0rem 0.3125rem;
+  border: 0.5px solid #d9d9d9;
+}
+.controlInput input::placeholder {
+  color: var(--clrgray--);
+  padding-left: 5px;
+  font-size: 1.2rem;
+}
+.controlInput input:focus {
+  border: 1px solid var(--colorgreen--);
+}
 
+.controlInput #inscrever {
+  cursor: pointer;
+  width: 140px;
+  height: 50px;
 
+  font-size: 1.3rem;
+  font-weight: bold;
 
+  color: #fff;
+  background-color: var(--colorgreen--);
+  border: none;
+  border-radius: 0rem 0.3125rem 0.3125rem 0rem;
+  opacity: 1;
+}
 
+.controlInput #inscrever:hover {
+  opacity: 0.9;
+}
 
+.containerSocialPay {
+  border-top: 1px solid var(--clrgray--);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.socialFooter {
+  margin: 20px 30px;
+}
+.socialFooter a {
+  margin-inline: 10px;
+}
+.paymentsFooter {
+  margin: 50px 90px;
+}
 
 /* Responsividade */
 @media only screen and (min-width: 320px) and (max-width: 680px) {
-  header nav {
+  header .menu {
     /* border: 2px solid black; */
   }
 
-  nav .btnNav {
-    width: 35%;
-    gap: 20px;
-    margin-right: 10px;
-    /* border: 4px solid black; */
+  .menu .btnNav {
+    margin-right: 0;
+    width: 65%;
+    justify-content: center;
+    gap: 50px;
+
   }
-   /* #imgBanner{
+  #buscar{
     width: 100%;
-    height: 30vh;
-    object-fit: cover;
-    border: 2px solid red;
-  } */
+  }
+
+  .containerTextAndNew{
+    flex-direction: column;
+    align-items: start;
+  }
+  .newsletter{
+    width: 80%;
+    margin-left: 30px;
+  }
+  .controlInput{
+    width: 90%;
+    flex-direction: column;
+
+  }
+  .controlInput input{
+    width: 100%;
+    height: 36px;
+    margin-bottom: 20px;
+  }
+  .controlInput #inscrever{
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
