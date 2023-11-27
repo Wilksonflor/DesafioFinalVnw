@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Actor&family=Blinker:wght@100;200;300;400;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -15,14 +15,14 @@
       src="https://kit.fontawesome.com/e0d4a81d6c.js"
       crossorigin="anonymous"
     ></script>
-    <title>Desafio Final - Vai na Web</title>
     <script src="script.js" defer></script>
+    <title>Desafio Final - Vai na Web</title>
   </head>
 
   <body>
     <header>
       <nav class="menu fixednav">
-        <a href=""><img src="src/logo.png" alt="" /></a>
+        <a href=""><img src="src/logo.png" alt="Logo da selfcare" /></a>
 
         <div class="btnNav">
           <div class="searchContainer">
@@ -49,23 +49,26 @@
             />
           </button>
         </div>
-        
       </nav>
 
-      <img id="imgBanner" src="src/banner.png" alt="" />
+      <img id="imgBanner" src="src/banner.png" alt="Banner Oferta" />
     </header>
 
     <main>
+
       <section>
         <div class="titleSection">
           <h2>PROMOÇÃO</h2>
           <p>9 produtos</p>
         </div>
 
-        <div class="containerProducts">
+        <section class="containerProducts">
+          
           <div class="boxProducts" data-nome="Elixir da Eternidade">
+
             <div class="headerCard">
-              <img src="src/produtos/img01.png" alt="" />
+              <img src="src/produtos/img01.png" alt="Imagem do Elixir da Eternidade" />
+
               <div class="description">
                 <h6>Descrição do Elixir da Eternidade.</h6>
                 <p>
@@ -74,16 +77,16 @@
                   iusto sed adipisci omnis illum et laborum laudantium pariatur
                   modi ducimus velit.
                 </p>
-              </div>
+              </div>        
             </div>
-            <h4>Elixir da Eternidade</h4>
+            <p>Elixir da Eternidade</p>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </div>
 
           <div class="boxProducts" data-nome="Vitamina do Sol">
             <div class="headerCard">
-              <img src="src/produtos/img02.png" alt="" />
+              <img src="src/produtos/img02.png" alt="Imagem do produto vitamina do sol" />
               <div class="description">
                 <h6>Descrição da Vitamina do Sol.</h6>
                 <p>
@@ -94,14 +97,14 @@
                 </p>
               </div>
             </div>
-            <h4>Vitamina do Sol</h4>
+            <p>Vitamina do Sol</p>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </div>
 
           <div class="boxProducts" data-nome="Vitamina da Lua">
             <div class="headerCard">
-              <img src="src/produtos/img03.png" alt="" />
+              <img src="src/produtos/img03.png" alt="Imagem do produto Vitamina da Lua" />
               <div class="description">
                 <h6>Descrição da Vitamina da Lua.</h6>
                 <p>
@@ -112,16 +115,16 @@
                 </p>
               </div>
             </div>
-            <h4>Vitamina da Lua</h4>
+            <p>Vitamina da Lua</p>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </div>
-        </div>
+        </section>
 
         <div class="containerProducts">
           <div class="boxProducts" data-nome="Pétalas de Amor">
             <div class="headerCard">
-              <img src="src/produtos/img 04.png" alt="" />
+              <img src="src/produtos/img 04.png" alt="Imagem do produto Pétalas de Amor" />
               <div class="description">
                 <h6>Descrição da Pétalas de Amor.</h6>
                 <p>
@@ -132,14 +135,14 @@
                 </p>
               </div>
             </div>
-            <h4>Pétalas de Amor</h4>
+            <p>Pétalas de Amor</p>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </div>
 
           <div class="boxProducts">
-            <div class="headerCard"  data-nome="Essência da Natureza">
-              <img src="src/produtos/img5.png" alt="" />
+            <div class="headerCard" data-nome="Essência da Natureza">
+              <img src="src/produtos/img5.png" alt="Imagem do produto Essência da natureza" />
               <div class="description">
                 <h6>Descrição da Essência da Natureza.</h6>
                 <p>
@@ -150,14 +153,14 @@
                 </p>
               </div>
             </div>
-            <h4>Essência da Natureza</h4>
+            <p>Essência da Natureza</p>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </div>
 
           <div class="boxProducts" data-nome="Jasmin com notas de Rosa">
-            <div class="headerCard" >
-              <img src="src/produtos/img06.png" alt="" />
+            <div class="headerCard">
+              <img src="src/produtos/img06.png" alt="Imagem do produto Jasmin com notas de Rosa" />
               <div class="description">
                 <h6>Descrição da Jasmin com notas de Rosa.</h6>
                 <p>
@@ -168,7 +171,7 @@
                 </p>
               </div>
             </div>
-            <h4>Jasmin com notas de Rosa</h4>
+            <p>Jasmin com notas de Rosa</p>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </div>
@@ -177,7 +180,7 @@
         <div class="containerProducts">
           <div class="boxProducts" data-nome="Essência de Melissa">
             <div class="headerCard">
-              <img src="src/produtos/img07.png" alt="" />
+              <img src="src/produtos/img07.png" alt="Imagem do produto Essência de Melissa" />
               <div class="description">
                 <h6>Descrição da Essência de Melissa.</h6>
                 <p>
@@ -188,14 +191,14 @@
                 </p>
               </div>
             </div>
-            <h4>Essência de Melissa</h4>
+            <p>Essência de Melissa</p>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </div>
 
           <div class="boxProducts" data-nome="Pureza Iluminada">
             <div class="headerCard">
-              <img src="src/produtos/img08.png" alt="" />
+              <img src="src/produtos/img08.png" alt="Imagem do produto Pureza Iluminada" />
               <div class="description">
                 <h6>Descrição da Pureza Iluminada.</h6>
                 <p>
@@ -206,14 +209,14 @@
                 </p>
               </div>
             </div>
-            <h4>Pureza Iluminada</h4>
+            <p>Pureza Iluminada</p>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </div>
 
           <div class="boxProducts" data-nome="Essência de patchouli">
             <div class="headerCard">
-              <img src="src/produtos/img09.png" alt="" />
+              <img src="src/produtos/img09.png" alt="Imagem do produto Essência de patchouli" />
               <div class="description">
                 <h6>Descrição da Essência de patchouli.</h6>
                 <p>
@@ -224,7 +227,7 @@
                 </p>
               </div>
             </div>
-            <h4>Essência de patchouli</h4>
+            <p>Essência de patchouli</p>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
           </div>
@@ -233,15 +236,17 @@
     </main>
 
     <footer>
+
       <div class="containerTextAndNew">
-        <div class="textFooter">
+        <nav class="textFooter">
           <a href="#">Contato</a>
           <a href="#">Termos de serviço</a>
           <a href="#">Política de privacidade</a>
           <a href="#">Cancelamento, troca e reembolso</a>
-        </div>
+        </nav>
 
-        <div class="newsletter">
+        <form class="newsletter">
+          
           <h5>Newsletter</h5>
           <div class="controlInput">
             <input
@@ -252,7 +257,7 @@
             />
             <button id="inscrever">Inscrever</button>
           </div>
-        </div>
+        </form>
       </div>
 
       <div class="containerSocialPay">
