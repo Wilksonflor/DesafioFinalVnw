@@ -45,7 +45,7 @@ header .menu {
 
 .menu .btnNav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 20%;
   margin-right: 50px;
 
@@ -60,11 +60,18 @@ header .menu {
 #buscar {
   height: 30px;
   width: 100%;
-  outline: none;
   display: none;
 
+  outline: none;
+  padding-left: .3rem;
+  background-color: #fff;
+  border-radius: 0.3125rem 0rem 0rem 0.3125rem;
+  border: 0.5px solid #d9d9d9;
 }
+#buscar:focus{
 
+  border: 1.1px solid var(--colorgreen--);
+}
 
 .menu button {
   cursor: pointer;
@@ -72,9 +79,7 @@ header .menu {
   background: none;
 }
 
-nav #btnMenuMobile {
-  display: none;
-}
+
 
 section .titleSection {
   display: flex;
