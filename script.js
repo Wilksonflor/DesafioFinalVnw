@@ -25,3 +25,19 @@ const btnBuscar = document.querySelector('#btnBuscar').addEventListener('click',
   const isInputVisible = window.getComputedStyle(buscar).display !== 'none';
   buscar.style.display = isInputVisible ? 'none' : 'block';
 })
+
+function filtrarProdutos() {
+  const termoBusca = document.querySelector('#buscar').value.toLowerCase();
+  const produtos = document.querySelectorAll('.boxProducts');
+
+  produtos.forEach(produto => {
+    const nomeProduto = produto.dataset.nome ? produto.dataset.nome.toLowerCase() : '';
+    const match = nomeProduto.includes(termoBusca);
+
+    if (match) {
+      produto.style.display = 'block';
+    } else {
+      produto.style.display = 'none';
+    }
+  });
+}

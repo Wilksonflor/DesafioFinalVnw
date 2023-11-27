@@ -30,7 +30,8 @@
               type="search"
               name="buscar"
               id="buscar"
-              placeholder="Encontre o que procura"
+              placeholder="Buscar produtos"
+              oninput="filtrarProdutos()"
             />
             <button id="btnBuscar">
               <img src="src/lupa.png" alt="icone da lupa" title="Buscar" />
@@ -62,7 +63,7 @@
         </div>
 
         <div class="containerProducts">
-          <article class="boxProducts">
+          <div class="boxProducts" data-nome="Elixir da Eternidade">
             <div class="headerCard">
               <img src="src/produtos/img01.png" alt="" />
               <div class="description">
@@ -78,9 +79,9 @@
             <h4>Elixir da Eternidade</h4>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
-          </article>
+          </div>
 
-          <article class="boxProducts">
+          <div class="boxProducts" data-nome="Vitamina do Sol">
             <div class="headerCard">
               <img src="src/produtos/img02.png" alt="" />
               <div class="description">
@@ -96,9 +97,9 @@
             <h4>Vitamina do Sol</h4>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
-          </article>
+          </div>
 
-          <article class="boxProducts">
+          <div class="boxProducts" data-nome="Vitamina da Lua">
             <div class="headerCard">
               <img src="src/produtos/img03.png" alt="" />
               <div class="description">
@@ -114,11 +115,11 @@
             <h4>Vitamina da Lua</h4>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
-          </article>
+          </div>
         </div>
 
         <div class="containerProducts">
-          <article class="boxProducts">
+          <div class="boxProducts" data-nome="Pétalas de Amor">
             <div class="headerCard">
               <img src="src/produtos/img 04.png" alt="" />
               <div class="description">
@@ -134,10 +135,10 @@
             <h4>Pétalas de Amor</h4>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
-          </article>
+          </div>
 
-          <article class="boxProducts">
-            <div class="headerCard">
+          <div class="boxProducts">
+            <div class="headerCard"  data-nome="Essência da Natureza">
               <img src="src/produtos/img5.png" alt="" />
               <div class="description">
                 <h6>Descrição da Essência da Natureza.</h6>
@@ -152,10 +153,10 @@
             <h4>Essência da Natureza</h4>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
-          </article>
+          </div>
 
-          <article class="boxProducts">
-            <div class="headerCard">
+          <div class="boxProducts" data-nome="Jasmin com notas de Rosa">
+            <div class="headerCard" >
               <img src="src/produtos/img06.png" alt="" />
               <div class="description">
                 <h6>Descrição da Jasmin com notas de Rosa.</h6>
@@ -170,11 +171,11 @@
             <h4>Jasmin com notas de Rosa</h4>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
-          </article>
+          </div>
         </div>
 
         <div class="containerProducts">
-          <article class="boxProducts">
+          <div class="boxProducts" data-nome="Essência de Melissa">
             <div class="headerCard">
               <img src="src/produtos/img07.png" alt="" />
               <div class="description">
@@ -190,9 +191,9 @@
             <h4>Essência de Melissa</h4>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
-          </article>
+          </div>
 
-          <article class="boxProducts">
+          <div class="boxProducts" data-nome="Pureza Iluminada">
             <div class="headerCard">
               <img src="src/produtos/img08.png" alt="" />
               <div class="description">
@@ -208,9 +209,9 @@
             <h4>Pureza Iluminada</h4>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
-          </article>
+          </div>
 
-          <article class="boxProducts">
+          <div class="boxProducts" data-nome="Essência de patchouli">
             <div class="headerCard">
               <img src="src/produtos/img09.png" alt="" />
               <div class="description">
@@ -226,7 +227,7 @@
             <h4>Essência de patchouli</h4>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
             <button class="btnComprar">Comprar</button>
-          </article>
+          </div>
         </div>
       </section>
     </main>
