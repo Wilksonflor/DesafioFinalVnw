@@ -23,6 +23,11 @@ function animateHeaderTransition() {
 const btnBuscar = document.querySelector('#btnBuscar').addEventListener('click', () =>{
   const buscar = document.querySelector('#buscar')
   const isInputVisible = window.getComputedStyle(buscar).display !== 'none';
+
+  if(!isInputVisible){
+    const section = document.querySelector('.containerProducts')
+    section.scrollIntoView({section: 'smooth'})
+  }
   buscar.style.display = isInputVisible ? 'none' : 'block';
 })
 
@@ -41,3 +46,20 @@ function filtrarProdutos() {
     }
   });
 }
+
+
+// Modal
+document.getElementById('openModalBtn').addEventListener('click', function () {
+  document.getElementById('loginModal').style.display = 'flex';
+});
+
+document.getElementById('closeModalBtn').addEventListener('click', function () {
+  document.getElementById('loginModal').style.display = 'none';
+});
+
+window.addEventListener('click', function (event) {
+  const modal = document.getElementById('loginModal');
+  if (event.target === modal) {
+      modal.style.display = 'none';
+  }
+});

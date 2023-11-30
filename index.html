@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modal.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon" />
@@ -38,7 +39,7 @@
             </button>
           </div>
 
-          <button>
+          <button id="openModalBtn">
             <img src="src/user.png" alt="icone do usuário" title="Entrar" />
           </button>
           <button>
@@ -55,7 +56,6 @@
     </header>
 
     <main>
-
       <section>
         <div class="titleSection">
           <h2>PROMOÇÃO</h2>
@@ -63,11 +63,12 @@
         </div>
 
         <section class="containerProducts">
-          
           <div class="boxProducts" data-nome="Elixir da Eternidade">
-
             <div class="headerCard">
-              <img src="src/produtos/img01.png" alt="Imagem do Elixir da Eternidade" />
+              <img
+                src="src/produtos/img01.png"
+                alt="Imagem do Elixir da Eternidade"
+              />
 
               <div class="description">
                 <h6>Descrição do Elixir da Eternidade.</h6>
@@ -77,7 +78,7 @@
                   iusto sed adipisci omnis illum et laborum laudantium pariatur
                   modi ducimus velit.
                 </p>
-              </div>        
+              </div>
             </div>
             <p>Elixir da Eternidade</p>
             <h5>R$ <span class="valorProduto"> 50,00</span></h5>
@@ -86,7 +87,10 @@
 
           <div class="boxProducts" data-nome="Vitamina do Sol">
             <div class="headerCard">
-              <img src="src/produtos/img02.png" alt="Imagem do produto vitamina do sol" />
+              <img
+                src="src/produtos/img02.png"
+                alt="Imagem do produto vitamina do sol"
+              />
               <div class="description">
                 <h6>Descrição da Vitamina do Sol.</h6>
                 <p>
@@ -104,7 +108,10 @@
 
           <div class="boxProducts" data-nome="Vitamina da Lua">
             <div class="headerCard">
-              <img src="src/produtos/img03.png" alt="Imagem do produto Vitamina da Lua" />
+              <img
+                src="src/produtos/img03.png"
+                alt="Imagem do produto Vitamina da Lua"
+              />
               <div class="description">
                 <h6>Descrição da Vitamina da Lua.</h6>
                 <p>
@@ -124,7 +131,10 @@
         <div class="containerProducts">
           <div class="boxProducts" data-nome="Pétalas de Amor">
             <div class="headerCard">
-              <img src="src/produtos/img 04.png" alt="Imagem do produto Pétalas de Amor" />
+              <img
+                src="src/produtos/img 04.png"
+                alt="Imagem do produto Pétalas de Amor"
+              />
               <div class="description">
                 <h6>Descrição da Pétalas de Amor.</h6>
                 <p>
@@ -142,7 +152,10 @@
 
           <div class="boxProducts">
             <div class="headerCard" data-nome="Essência da Natureza">
-              <img src="src/produtos/img5.png" alt="Imagem do produto Essência da natureza" />
+              <img
+                src="src/produtos/img5.png"
+                alt="Imagem do produto Essência da natureza"
+              />
               <div class="description">
                 <h6>Descrição da Essência da Natureza.</h6>
                 <p>
@@ -160,7 +173,10 @@
 
           <div class="boxProducts" data-nome="Jasmin com notas de Rosa">
             <div class="headerCard">
-              <img src="src/produtos/img06.png" alt="Imagem do produto Jasmin com notas de Rosa" />
+              <img
+                src="src/produtos/img06.png"
+                alt="Imagem do produto Jasmin com notas de Rosa"
+              />
               <div class="description">
                 <h6>Descrição da Jasmin com notas de Rosa.</h6>
                 <p>
@@ -180,7 +196,10 @@
         <div class="containerProducts">
           <div class="boxProducts" data-nome="Essência de Melissa">
             <div class="headerCard">
-              <img src="src/produtos/img07.png" alt="Imagem do produto Essência de Melissa" />
+              <img
+                src="src/produtos/img07.png"
+                alt="Imagem do produto Essência de Melissa"
+              />
               <div class="description">
                 <h6>Descrição da Essência de Melissa.</h6>
                 <p>
@@ -198,7 +217,10 @@
 
           <div class="boxProducts" data-nome="Pureza Iluminada">
             <div class="headerCard">
-              <img src="src/produtos/img08.png" alt="Imagem do produto Pureza Iluminada" />
+              <img
+                src="src/produtos/img08.png"
+                alt="Imagem do produto Pureza Iluminada"
+              />
               <div class="description">
                 <h6>Descrição da Pureza Iluminada.</h6>
                 <p>
@@ -216,7 +238,10 @@
 
           <div class="boxProducts" data-nome="Essência de patchouli">
             <div class="headerCard">
-              <img src="src/produtos/img09.png" alt="Imagem do produto Essência de patchouli" />
+              <img
+                src="src/produtos/img09.png"
+                alt="Imagem do produto Essência de patchouli"
+              />
               <div class="description">
                 <h6>Descrição da Essência de patchouli.</h6>
                 <p>
@@ -232,11 +257,41 @@
             <button class="btnComprar">Comprar</button>
           </div>
         </div>
+
+        <div id="loginModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>Login selfCare</h2>
+            <form action="#" id="formModal">
+              <div class="inputFormControl">
+                <i class="fa-solid fa-user"></i>
+                <input
+                  type="text"
+                  id="loginUsername"
+                  name="loginUsername"
+                  placeholder="Usuário"
+                  required
+                />
+              </div>
+
+              <div class="inputFormControl">
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  type="password"
+                  id="loginPassword"
+                  name="loginPassword"
+                  placeholder="*********"
+                  required
+                />
+              </div>
+              <button type="submit" id="btnLoginModal">Login</button>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
-
       <div class="containerTextAndNew">
         <nav class="textFooter">
           <a href="#">Contato</a>
@@ -246,7 +301,6 @@
         </nav>
 
         <form class="newsletter">
-          
           <h5>Newsletter</h5>
           <div class="controlInput">
             <input
