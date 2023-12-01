@@ -26,7 +26,7 @@ const btnBuscar = document.querySelector('#btnBuscar').addEventListener('click',
 
   if(!isInputVisible){
     const section = document.querySelector('.containerProducts')
-    section.scrollIntoView({section: 'smooth'})
+    section.scrollIntoView({ behavior: 'smooth'})
   }
   buscar.style.display = isInputVisible ? 'none' : 'block';
 })

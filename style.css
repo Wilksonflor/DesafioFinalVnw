@@ -150,6 +150,7 @@ section .containerProducts {
 
   padding: 10px;
   opacity: 0;
+  transform: translateY(-100%);
   /* transition: 5s ease; */
 }
 
