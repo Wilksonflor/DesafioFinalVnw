@@ -50,14 +50,12 @@ header .menu {
   justify-content: space-evenly;
   width: 20%;
   margin-right: 50px;
-
 }
 
 .searchContainer {
   display: flex;
   align-items: center;
   gap: 5px;
-
 }
 
 #buscar {
@@ -66,14 +64,13 @@ header .menu {
   display: none;
 
   outline: none;
-  padding-left: .3rem;
+  padding-left: 0.3rem;
   background-color: #fff;
   border-radius: 0.3125rem 0rem 0rem 0.3125rem;
   border: 0.5px solid #d9d9d9;
 }
 
-#buscar:focus{
-
+#buscar:focus {
   border: 1.1px solid var(--colorgreen--);
 }
 
@@ -82,8 +79,6 @@ header .menu {
   border: none;
   background: none;
 }
-
-
 
 section .titleSection {
   display: flex;
@@ -136,7 +131,7 @@ section .containerProducts {
 .headerCard:hover::after {
   transform: translateY(-80%);
   opacity: 0.9;
-  transition-delay: .8s;
+  transition-delay: 0.8s;
 }
 
 .headerCard .description {
@@ -226,7 +221,6 @@ section .containerProducts {
   transition: 0.4s ease-in-out;
 }
 
-
 footer {
   border-top: 1px solid var(--clrgray--);
   margin-top: 120px;
@@ -261,7 +255,6 @@ footer {
 .newsletter {
   width: 30%;
 
-  
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -334,112 +327,101 @@ footer {
 
 /* Responsividade */
 @media only screen and (min-width: 320px) and (max-width: 680px) {
-
   .menu .btnNav {
     margin-right: 0;
     width: 65%;
     justify-content: center;
     gap: 30px;
-
   }
 
-  #buscar{
-
+  #buscar {
     width: 100%;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
-  .containerTextAndNew{
+  .containerTextAndNew {
     width: 90%;
     flex-direction: column;
     align-items: start;
   }
-  .newsletter{
+  .newsletter {
     width: 80%;
     margin-left: 30px;
   }
-  .controlInput{
+  .controlInput {
     width: 100%;
     flex-direction: column;
-
   }
-  .controlInput input{
+  .controlInput input {
     width: 100%;
     height: 36px;
     margin-bottom: 20px;
   }
-  .controlInput #inscrever{
+  .controlInput #inscrever {
     width: 100%;
     margin-bottom: 30px;
   }
-  .containerSocialPay{
+  .containerSocialPay {
     width: 100%;
   }
   .paymentsFooter {
-
     display: flex;
     margin: 0px 20px;
-
   }
-  .paymentsFooter img{
-
+  .paymentsFooter img {
     width: 100%;
   }
-  .socialFooter img{
+  .socialFooter img {
     margin-top: 10px;
   }
 }
 
-@media only screen and (min-width: 681px) and (max-width: 920px){
-
-  .menu .btnNav{
+@media only screen and (min-width: 681px) and (max-width: 920px) {
+  .menu .btnNav {
     width: 50%;
-
   }
-  .containerTextAndNew{
-  flex-direction: column;
-  align-items: flex-start;
+  .containerTextAndNew {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .newsletter{
+  .newsletter {
     width: 80%;
 
     margin-left: 30px;
     margin-bottom: 20px;
   }
-  .controlInput{
+  .controlInput {
     width: 80%;
 
     flex-direction: column;
   }
-  .controlInput input{
+  .controlInput input {
     width: 100%;
     height: 40px;
   }
-  .controlInput #inscrever{
+  .controlInput #inscrever {
     width: 100%;
     margin-block: 20px;
   }
 }
 
-@media only screen and (min-width: 921px) and (max-width:1280px){
-  .menu .btnNav{
+@media only screen and (min-width: 921px) and (max-width: 1280px) {
+  .menu .btnNav {
     width: 45%;
-    
   }
-  .newsletter{
-
+  .newsletter {
     margin-right: 30px;
   }
-  .controlInput{
+  .controlInput {
     flex-direction: column;
     width: 100%;
   }
-  .controlInput input{
+  .controlInput input {
     width: 100%;
     height: 40px;
     margin-bottom: 11px;
   }
-  .controlInput #inscrever{
+  .controlInput #inscrever {
     width: 70%;
   }
 }
